@@ -48,3 +48,19 @@ rkArmSetServo(4, k);  // ID =4 -> prave klepeto dole 140 nahoře 60 smerem nahor
     pinMode(SerialTx1, OUTPUT);
     digitalWrite(SerialRx1, HIGH);
     digitalWrite(SerialTx1, HIGH);*/
+
+#ifdef AAA  // podklady pro analogove servo 
+#include <Servo.h>
+
+    servo0.attach(33); 
+
+
+    position_servo0 = 10;
+    servo0.write(position_servo0);
+
+        rbc().setMotors().power(LEFT_MOTOR, power_motor)
+                    .power(RIGHT_MOTOR, power_motor)
+                    .set();
+
+    https://github.com/RoboticsBrno/ESP32-Arduino-Servo-Library.git
+#endif
